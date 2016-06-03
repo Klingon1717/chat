@@ -1,3 +1,36 @@
 'use strict';
 
-var serverUrl='http://tiyfe.herokuapp.com/collections/textteleportation';
+$(document).ready(function() {
+
+var mess = $('#message');
+var enter = $('#enter');
+var chat = $('#chat-box');
+
+
+$.get (
+	'http://tiyfe.herokuapp.com/collections/textteleportation',
+	function(response){
+		response.forEach(function(response, index){
+			chat.append(response.mess)
+		})
+	},
+	'json'
+);
+
+enter.click(function(e){
+	e.preventDefault();
+		var newMess = mess.val();
+$.post(
+	'http://tiyfe.herokuapp.com/collections/textteleportation',
+	{
+		mess: newMess
+	},
+	function(response){
+	chat.prepend(response.newMess)
+	},
+	'json'
+	)
+
+
+});
+});
