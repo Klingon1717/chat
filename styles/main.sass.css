@@ -1,5 +1,11 @@
+body {
+  background-color: #bbbbbb;
+  padding: 0;
+  margin: 0; }
+
 #chat-box {
   background-color: #A3D8C6;
   height: 20em;
-  width: 80%;
-  text-align: center; }
+  width: 60%;
+  text-align: center;
+  color: #4A4A4A; }
