@@ -13,7 +13,7 @@ $.get (
 	function(response){
 		mb.html(' ');
 		response.forEach(function(response, index){
-			chat.append('<div id="message-board"><p>' + response.newMess + '</p></div>')
+			chat.append('<p>' + response.mess + '</p>' );
 		})
 	},
 	'json'
@@ -28,7 +28,7 @@ $.post(
 		mess : newMess
 	},
 	function(response){
-	chat.prepend('<div id="message-board"><p>' + response.mess + '</p></div>')
+	chat.prepend('<p>' + response.mess + '</p>');
 	},
 	'json'
 	)
