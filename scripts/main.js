@@ -11,7 +11,7 @@ $.get (
 	'http://tiyfe.herokuapp.com/collections/textteleportation',
 	function(response){
 		response.forEach(function(response, index){
-			chat.append(response.mess)
+			chat.append(response.newMess)
 		})
 	},
 	'json'
@@ -23,10 +23,10 @@ enter.click(function(e){
 $.post(
 	'http://tiyfe.herokuapp.com/collections/textteleportation',
 	{
-		mess: newMess
+		mess : newMess
 	},
 	function(response){
-	chat.prepend(response.newMess)
+	chat.prepend(response.mess)
 	},
 	'json'
 	)

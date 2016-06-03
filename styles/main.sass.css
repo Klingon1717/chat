@@ -1,9 +1,5 @@
-#public-home {
-  background-color: #ebebeb;
-  height: 500px;
-  width: 100%;
-  padding: 0;
-  margin: 0; }
-  #public-home input {
-    width: 80%;
-    height: 200px; }
+#chat-box {
+  background-color: #A3D8C6;
+  height: 20em;
+  width: 80%;
+  text-align: center; }
